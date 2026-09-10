@@ -1,0 +1,27 @@
+[project]
+name = "flyforage"
+version = "0.1.0"
+description = "Connectome-based fruit fly foraging experiments"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "torch>=2.4",
+  "gymnasium>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+data = [
+  "pandas>=2.2",
+  "pyarrow>=17.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
